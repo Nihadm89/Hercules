@@ -809,7 +809,6 @@ const char* parse_callfunc(const char* p, int require_paren, int is_custom)
 	func = script->add_word(p);
 	if (script->str_data[func].type == C_FUNC) {
 		script->syntax.nested_call++;
-		/** only when unset (-1), valid values are >= 0 **/
 		if (script->syntax.last_func != -1) {
 			if( script->str_data[func].val == script->buildin_lang_macro_offset ) {
 				script->syntax.lang_macro_active = true;
